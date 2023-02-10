@@ -3,7 +3,7 @@ let color;
 let id;
 let userName;
 let avatarColor;
-const usernameRegex = /^[a-z0-9_.]/;
+const usernameRegex = /^[a-zA-Z0-9_.]/;
 const validateUser = (userName) => {
   if (userName.match(usernameRegex)) {
     return true;

@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+body {
+  max-height: 100vh;
+}
+
+.wrap {
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/792/639/808/pattern-monochrome-telegram-logo-cats-hd-wallpaper-preview.jpg");
+  width: 100%;
+  height: 95vh;
+  padding-top: 20px;
+}
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #333;
+  width: 100%;
+  height: 5vh;
+}
+.header__content {
+  font-size: 20px;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: azure;
+}
+.clearBtn {
+  user-select: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: azure;
+  background: none;
+  padding: 5px 10px;
+  width: 100px;
+  border: 1px solid azure;
+}
+.nav__content {
+  font-size: 18px;
+  display: flex;
+  column-gap: 40px;
+}
+.users {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.msgContainer {
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  width: 100%;
+  height: 100vh;
+  max-height: 80vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin-bottom: 20px;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Трек поле скроллбара */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background: rgb(18, 1, 48);
+  border-radius: 20px;
+}
+
+/* Ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(198, 21, 21, 1);
+  background: rgb(0, 59, 251);
+  border-radius: 20px;
+}
+.form {
+  width: 100%;
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+}
+.message__info {
+  font-size: 18px;
+  color: azure;
+  padding: 0 20px;
+  width: 80%;
+  height: 60px;
+  border-radius: 20px;
+  border: none;
+  background-color: #999;
+}
+.btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 18px;
+  border: none;
+  background-color: rgb(0, 128, 255);
+  cursor: pointer;
+  color: azure;
+}
+
+.msg {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: rgb(18, 1, 48);
+  max-width: 30%;
+  font-size: 16px;
+  color: azure;
+}
+.login__popup {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.active {
+  display: flex;
+}
+.login__form {
+  border-radius: 20px;
+  width: 300px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(18, 1, 48);
+  row-gap: 20px;
+}
+.userName {
+  width: 50%;
+  height: 40px;
+  border-radius: 10px;
+  background: #999;
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: azure;
+  font-size: 16px;
+}
+
+.userName::placeholder {
+  color: azure;
+}
+.submitBtn {
+  width: 40%;
+  height: 40px;
+  background-color: #000;
+  color: azure;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s linear all;
+}
+.submitBtn:hover {
+  background-color: azure;
+  color: #000;
+}
+
+.my-msg {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: right;
+}
+.msgBox {
+  display: flex;
+  column-gap: 10px;
+}
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"
+      integrity="sha512-YeeA/Qxn5hYdkukScTCNNOhTrv1C2RubAGButJ1rmgQwZf/HdRaCGl+JAVkqsqaNRaYNHdheiuKKuPf9mDcqKg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+    ></script>
+    <title>Anonymous Chat</title>
+  </head>
+  <body>
+    <div class="login__popup active">
+      <form action="" class="login__form">
+        <input
+          class="userName"
+          type="text"
+          name="userName"
+          placeholder="Input username..."
+        />
+        <button class="submitBtn">Login</button>
+      </form>
+    </div>
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <div class="logo">Anonymous Chat</div>
+          <div class="nav__content">
+            <div class="users">
+              <p class="usersCount"></p>
+              &nbsp; Users online
+            </div>
+            <button class="clearBtn">Clear Chat</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="wrap">
+      <div class="container">
+        <div class="msgContainer"></div>
+        <div class="msgForm">
+          <form action="" id="form" class="form">
+            <input type="text" id="message__info" class="message__info" />
+
+            <button class="btn">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.6.1/randomColor.min.js"
+      integrity="sha512-vPeZ7JCboHcfpqSx5ZD+/jpEhS4JpXxfz9orSvAPPj0EKUVShU2tgy7XkU+oujBJKnWmu4hU7r9MMQNWPfXsYw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>

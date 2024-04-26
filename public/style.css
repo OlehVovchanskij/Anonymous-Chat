@@ -1,199 +1,373 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Oswald", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Oswald', sans-serif;
 }
+
 body {
-  max-height: 100vh;
+	width: 100%;
+	height: 100vh;
 }
 
 .wrap {
-  background-image: url("https://c4.wallpaperflare.com/wallpaper/792/639/808/pattern-monochrome-telegram-logo-cats-hd-wallpaper-preview.jpg");
-  width: 100%;
-  height: 95vh;
-  padding-top: 20px;
+	background-image: url('https://c4.wallpaperflare.com/wallpaper/792/639/808/pattern-monochrome-telegram-logo-cats-hd-wallpaper-preview.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 95vh;
+	padding-top: 20px;
 }
 .container {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
+	padding: 0 10px;
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
 }
 
 .header {
-  background-color: #333;
-  width: 100%;
-  height: 5vh;
+	background-color: #333;
+	height: 5vh;
+	width: 100%;
+}
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 10px;
+}
+.logo_img {
+	width: 20px;
+	height: 20px;
 }
 .header__content {
-  font-size: 20px;
-  height: 5vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: azure;
+	font-size: 14px;
+	height: 5vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: azure;
 }
 .clearBtn {
-  user-select: none;
-  cursor: pointer;
-  border-radius: 10px;
-  color: azure;
-  background: none;
-  padding: 5px 10px;
-  width: 100px;
-  border: 1px solid azure;
+	user-select: none;
+	cursor: pointer;
+	border-radius: 10px;
+	color: azure;
+	background: none;
+	padding: 5px 20px;
+
+	border: 1px solid azure;
 }
 .nav__content {
-  font-size: 18px;
-  display: flex;
-  column-gap: 40px;
+	font-size: 14px;
+	display: flex;
+	column-gap: 10px;
+	justify-content: space-between;
+	align-items: center;
 }
 .users {
-  display: flex;
-  flex-wrap: nowrap;
+	display: flex;
+	flex-wrap: nowrap;
 }
 .msgContainer {
-  padding-right: 10px;
-  padding-left: 10px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-  width: 100%;
-  height: 100vh;
-  max-height: 80vh;
-  overflow: scroll;
-  overflow-x: hidden;
-  margin-bottom: 20px;
+	padding-right: 10px;
+	padding-left: 10px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	width: 100%;
+	height: 100vh;
+	max-height: 80vh;
+	overflow: scroll;
+	overflow-x: hidden;
+
+	margin-bottom: 20px;
 }
 ::-webkit-scrollbar {
-  width: 15px;
+	width: 15px;
 }
 
 /* Трек поле скроллбара */
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background: rgb(18, 1, 48);
-  border-radius: 20px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background: rgb(18, 1, 48);
+	border-radius: 20px;
 }
 
-/* Ползунок скроллбара */
+/* Повзунок скроллбара */
 ::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0 0 6px rgba(198, 21, 21, 1);
-  background: rgb(0, 59, 251);
-  border-radius: 20px;
+	-webkit-box-shadow: inset 0 0 6px rgba(198, 21, 21, 1);
+	background: rgb(0, 59, 251);
+	border-radius: 20px;
 }
+
 .form {
-  width: 100%;
-  display: flex;
-  column-gap: 20px;
-  align-items: center;
+	width: 100%;
+	display: flex;
+	column-gap: 20px;
+	align-items: center;
+	position: relative;
 }
 .message__info {
-  font-size: 18px;
-  color: azure;
-  padding: 0 20px;
-  width: 80%;
-  height: 60px;
-  border-radius: 20px;
-  border: none;
-  background-color: #999;
+	font-size: 18px;
+	color: azure;
+	padding: 15px 20px;
+	width: 80%;
+	height: 60px;
+	border-radius: 20px;
+	border: none;
+	background-color: #999;
+	resize: none;
 }
 .btn {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  font-size: 18px;
-  border: none;
-  background-color: rgb(0, 128, 255);
-  cursor: pointer;
-  color: azure;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	font-size: 18px;
+	border: none;
+	background-color: rgb(0, 128, 255);
+	cursor: pointer;
+	color: azure;
 }
 
 .msg {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  overflow-wrap: break-word;
-  padding: 10px 20px;
-  border-radius: 10px;
-  background: rgb(18, 1, 48);
-  max-width: 30%;
-  font-size: 16px;
-  color: azure;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	overflow-wrap: break-word;
+	padding: 10px 20px;
+	border-radius: 10px;
+	background: rgb(18, 1, 48);
+	max-width: 30%;
+	font-size: 16px;
+	color: azure;
 }
 .login__popup {
-  width: 100%;
-  height: 100vh;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.9);
+	width: 100%;
+	height: 100vh;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.9);
 }
 .active {
-  display: flex;
+	display: flex !important;
 }
 .login__form {
-  border-radius: 20px;
-  width: 300px;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: rgb(18, 1, 48);
-  row-gap: 20px;
+	border-radius: 20px;
+	width: 300px;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	row-gap: 20px;
 }
 .userName {
-  width: 50%;
-  height: 40px;
-  border-radius: 10px;
-  background: #999;
-  border: none;
-  outline: none;
-  padding: 10px;
-  color: azure;
-  font-size: 16px;
+	width: 50%;
+	height: 40px;
+	border-radius: 10px;
+	background: #999;
+	border: none;
+	outline: none;
+	padding: 10px;
+	color: azure;
+	font-size: 16px;
 }
 
 .userName::placeholder {
-  color: azure;
+	color: azure;
 }
 .submitBtn {
-  width: 40%;
-  height: 40px;
-  background-color: #000;
-  color: azure;
-  font-size: 18px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s linear all;
+	width: 40%;
+	height: 40px;
+	background-color: #000;
+	color: azure;
+	font-size: 18px;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	transition: 0.3s linear all;
 }
 .submitBtn:hover {
-  background-color: azure;
-  color: #000;
+	background-color: azure;
+	color: #000;
 }
 
 .my-msg {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: right;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: right;
 }
 .msgBox {
-  display: flex;
-  column-gap: 10px;
+	display: flex;
+	column-gap: 10px;
 }
 .avatar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 18px;
+}
+
+.emojy_menu {
+	width: 40px;
+	height: 40px;
+	background: transparent;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.modal_emojy {
+	display: none;
+	flex-wrap: wrap;
+	overflow: scroll;
+	max-width: 500px;
+	max-height: 450px;
+	background-color: rgba(255, 255, 255, 0.3);
+	position: absolute;
+	z-index: 1000;
+	bottom: 70px;
+	right: 50px;
+	border-radius: 15px;
+}
+.modal_emojy.active {
+	display: flex;
+}
+.emojy_item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	padding: 10px;
+	width: 47.7px;
+}
+
+.change_wallpaper {
+	width: 30px;
+	height: 30px;
+	overflow: hidden;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	cursor: pointer;
+}
+.wallpaper__state {
+	width: 100%;
+	height: 100%;
+}
+.change_wallpaper__popup {
+	display: none;
+	width: 400px;
+	height: 350px;
+	background-color: rgba(37, 37, 37, 0.651);
+	position: absolute;
+	z-index: 999;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+	flex-direction: column;
+	align-items: center;
+}
+.basic__wallpaper__box {
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 20px;
+}
+.wallpaper__item {
+	background-size: cover;
+	width: 70px;
+	height: 70px;
+	cursor: pointer;
+	border-radius: 50%;
+	border: 2px solid #fff;
+}
+
+.closeBtn {
+	width: 25px;
+	height: 25px;
+	background-color: red;
+	border-radius: 50%;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.closeBtn:hover {
+	transform: rotate(360deg);
+	transition: all 0.5s;
+}
+.closeBtn::after {
+	position: absolute;
+	content: '';
+	width: 20px;
+	height: 2px;
+	background-color: #fff;
+	z-index: 3;
+
+	transform: rotate(45deg);
+}
+.closeBtn::before {
+	position: absolute;
+	content: '';
+	width: 20px;
+	height: 2px;
+
+	background-color: #fff;
+	z-index: 2;
+	transform: rotate(-45deg);
+}
+.costom__wallpaper__box {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	row-gap: 30px;
+}
+.input__walpaper__url {
+	width: 50%;
+	padding: 10px;
+	border-radius: 15px;
+	background-color: rgba(117, 117, 117, 0.3);
+	outline: none;
+	color: #fff;
+}
+.submit__custom__wallpapers {
+	color: white;
+	width: 30%;
+	height: 40px;
+	border-radius: 15px;
+	background-color: #333;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: color 0.4s;
+	transition: background-color 0.4s;
+	font-weight: 700;
+	font-size: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 2px;
+}
+.submit__custom__wallpapers:hover {
+	background-color: #fff;
+	color: #333;
 }

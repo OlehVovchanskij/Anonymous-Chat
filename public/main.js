@@ -60,20 +60,50 @@ socket.on('chat message', function (props) {
 $('.clearBtn').on('click', () => {
 	$('.msgContainer').html('')
 })
-$('.msgContainer').on('DOMSubtreeModified', e => {
-	let msges = document.querySelectorAll('.msg')
+let targetNode = $('.msgContainer')[0]
 
-	msges.forEach(item => {
-		let msgBox = item.parentNode
-		let dataId = $(msgBox).attr('data-id')
+// Options for the observer (which mutations to observe)
+let config = { childList: true };
 
-		if (dataId.toString() === id.toString()) {
-			$(msgBox).addClass('my-msg')
+// Callback function to execute when mutations are observed
+let callback = function(mutationsList) {
+	for(let mutation of mutationsList) {
+		if (mutation.type == 'childList') {
+			let msges = document.querySelectorAll('.msg')
+
+			msges.forEach(item => {
+				let msgBox = item.parentNode
+				let dataId = $(msgBox).attr('data-id')
+
+				if (dataId.toString() === id.toString()) {
+					$(msgBox).addClass('my-msg')
+				}
+			})
 		}
-	})
-	console.log()
-	$('.msgContainer').scrollTop($('.msgContainer')[0].scrollHeight)
-})
+
+	}
+};
+let observer = new MutationObserver(callback);
+
+// Start observing the target node for configured mutations
+observer.observe(targetNode, config);
+
+
+
+// $('.msgContainer').on('DOMSubtreeModified', e => {
+// 	let msges = document.querySelectorAll('.msg')
+//
+// 	msges.forEach(item => {
+// 		let msgBox = item.parentNode
+// 		let dataId = $(".msgBox").attr('data-id')
+// 		console.log(dataId)
+// 		if (dataId.toString() === id.toString()) {
+// 			$(".msgBox").addClass('my-msg')
+// 		}
+// 	})
+// 	console.log()
+// 	$('.msgContainer').scrollTop($('.msgContainer')[0].scrollHeight)
+// })
 
 // emojy
 
